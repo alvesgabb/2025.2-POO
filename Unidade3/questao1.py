@@ -9,28 +9,3 @@ i.	Observação: o código da agência deve ser um valor gerado aleatoriamente e
 e.	Ao final, os dados da conta, incluindo os do usuário, devem ser exibidos. Para isso, devem ser utilizados os métodos de acesso.
 Observação: ambas as classes devem prever mecanismo de auto referência para atribuição dos valores dos parâmetros dos métodos aos atributos da classe.
  """
-
-from datetime import datetime
-import random
-from usuario import Usuario
-from conta import Conta
-
-# a) Instanciar Usuario com valores padrão
-usuario = Usuario()
-
-# b) Solicitar dados do usuário
-usuario.rg = int(input("Digite o RG: "))
-usuario.cpf = int(input("Digite o CPF: "))
-usuario.nome = input("Digite o nome: ")
-data_str = input("Digite a data de nascimento (dd/mm/aaaa): ")
-usuario.dataNascimento = datetime.strptime(data_str, "%d/%m/%Y")
-
-# d) Criar Conta com todos os atributos
-agencia = random.randint(0, 999)
-dataAbertura = datetime.now()
-saldo = float(input("Digite o saldo inicial: "))
-conta = Conta(agencia, usuario, dataAbertura, saldo)
-
-# e) Exibir dados da conta e do usuário
-print("\n===== DADOS DA CONTA =====")
-print(conta)
