@@ -37,4 +37,3 @@ usuario1.set_data_nascimento(ano_nascimento,mes_nacimento,dia_nascimento)
 
 conta_usuario1 = Conta(usuario1)
 print(conta_usuario1)
-                f"Data de Nascimento: {self.usuario.dataNascimento.strftime('%d/%m/%Y')}")
