@@ -7,3 +7,4 @@ class Natal(CartaoWeb):
    def showMessage(self):
        print(f"Feliz Natal, {self.destinatario}! Que a mágia do Natal aqueça seu coração.")
        print("-"*35)
+
